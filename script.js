@@ -16,82 +16,81 @@ const startBtn = document.querySelector(".start"),
   alertBox = document.querySelector("#alert");
 
 let questions = [
-    {
-      question: "Apa itu keanekaragaman hayati?",
-      correct_answer: "Variasi makhluk hidup di Bumi",
-      incorrect_answers: ["Keanekaragaman hutan", "Keanekaragaman laut", "Keanekaragaman udara"],
-    },
-    {
-      question: "Tingkat keanekaragaman hayati yang meliputi variasi gen disebut?",
-      correct_answer: "Keanekaragaman gen",
-      incorrect_answers: ["Keanekaragaman ekosistem", "Keanekaragaman spesies", "Keanekaragaman bioma"],
-    },
-    {
-      question: "Keanekaragaman hayati terbesar di dunia terdapat di?",
-      correct_answer: "Hutan hujan tropis",
-      incorrect_answers: ["Gurun", "Kutub", "Hutan taiga"],
-    },
-    {
-      question: "Apa contoh keanekaragaman ekosistem?",
-      correct_answer: "Hutan, padang rumput, dan terumbu karang",
-      incorrect_answers: ["DNA, RNA, dan protein", "Air, tanah, dan udara", "Gunung, sungai, dan laut"],
-    },
-    {
-      question: "Penyebab utama hilangnya keanekaragaman hayati adalah?",
-      correct_answer: "Aktivitas manusia",
-      incorrect_answers: ["Perubahan iklim", "Letusan gunung berapi", "Angin topan"],
-    },
-    // Soal tambahan
-    {
-      question: "Apa yang dimaksud dengan spesies endemik?",
-      correct_answer: "Spesies yang hanya ditemukan di wilayah geografis tertentu",
-      incorrect_answers: ["Spesies yang hidup di banyak ekosistem", "Spesies yang bermigrasi sepanjang tahun", "Spesies yang punah di alam liar"],
-    },
-    {
-      question: "Salah satu ancaman terbesar bagi keanekaragaman hayati adalah?",
-      correct_answer: "Deforestasi",
-      incorrect_answers: ["Kepunahan alami", "Perubahan suhu global", "Migrasi burung"],
-    },
-    {
-      question: "Apa contoh keanekaragaman genetik?",
-      correct_answer: "Variasi warna bulu pada kucing",
-      incorrect_answers: ["Hutan dan padang rumput", "Komunitas serangga", "Spesies ikan dalam laut"],
-    },
-    {
-      question: "Apakah yang dimaksud dengan bioma?",
-      correct_answer: "Komunitas ekosistem besar yang mencakup wilayah luas",
-      incorrect_answers: ["Jenis spesies tunggal", "Kelompok genetik individu", "Proses evolusi"],
-    },
-    {
-      question: "Apa contoh interaksi simbiosis mutualisme?",
-      correct_answer: "Lebah yang membantu penyerbukan bunga",
-      incorrect_answers: ["Cacing pita dalam tubuh hewan", "Buaya dengan burung pemakan parasit", "Ikan kecil yang menempel pada ikan besar"],
-    },
-    {
-      question: "Apa yang menjadi ciri utama keanekaragaman ekosistem laut?",
-      correct_answer: "Variasi jenis terumbu karang, ikan, dan mamalia laut",
-      incorrect_answers: ["Jenis hutan dan padang rumput", "Jenis pohon dan serangga", "Komunitas burung dan reptil"],
-    },
-    {
-      question: "Apa dampak utama dari hilangnya keanekaragaman hayati terhadap ekosistem?",
-      correct_answer: "Menurunkan stabilitas dan kesehatan ekosistem",
-      incorrect_answers: ["Meningkatkan kesuburan tanah", "Meningkatkan jumlah spesies invasif", "Meningkatkan produktivitas lahan"],
-    },
-    {
-      question: "Apa yang dimaksud dengan spesies invasif?",
-      correct_answer: "Spesies yang bukan asli dan merugikan ekosistem lokal",
-      incorrect_answers: ["Spesies yang punah secara alami", "Spesies yang bermigrasi secara musiman", "Spesies yang tinggal di habitat alami"],
-    },
-    {
-      question: "Bagaimana cara melestarikan keanekaragaman hayati?",
-      correct_answer: "Membuat cagar alam dan taman nasional",
-      incorrect_answers: ["Membakar hutan", "Mengeringkan lahan basah", "Menangkap spesies langka untuk dijadikan hewan peliharaan"],
-    },
-    {
-      question: "Apa fungsi utama keanekaragaman hayati dalam ekosistem?",
-      correct_answer: "Menjaga keseimbangan dan stabilitas ekosistem",
-      incorrect_answers: ["Mengurangi ketersediaan sumber daya", "Meningkatkan risiko bencana alam", "Mengurangi populasi hewan predator"],
-    },
+  {
+    "question": "Apa itu keanekaragaman hayati?",
+    "correct_answer": "Variasi makhluk hidup di Bumi",
+    "incorrect_answers": ["Keanekaragaman hutan", "Keanekaragaman laut", "Keanekaragaman udara"]
+  },
+  {
+    "question": "Tingkat keanekaragaman hayati yang meliputi variasi gen disebut?",
+    "correct_answer": "Keanekaragaman gen",
+    "incorrect_answers": ["Keanekaragaman ekosistem", "Keanekaragaman spesies", "Keanekaragaman bioma"]
+  },
+  {
+    "question": "Keanekaragaman hayati terbesar terdapat di?",
+    "correct_answer": "Hutan hujan tropis",
+    "incorrect_answers": ["Gurun", "Kutub", "Hutan taiga"]
+  },
+  {
+    "question": "Contoh keanekaragaman ekosistem?",
+    "correct_answer": "Hutan, padang rumput, terumbu karang",
+    "incorrect_answers": ["DNA, RNA, protein", "Air, tanah, udara", "Gunung, sungai, laut"]
+  },
+  {
+    "question": "Penyebab utama hilangnya keanekaragaman hayati?",
+    "correct_answer": "Aktivitas manusia",
+    "incorrect_answers": ["Perubahan iklim", "Letusan gunung", "Angin topan"]
+  },
+  {
+    "question": "Apa itu spesies endemik?",
+    "correct_answer": "Spesies di wilayah tertentu",
+    "incorrect_answers": ["Hidup di banyak ekosistem", "Bermigrasi sepanjang tahun", "Punah di alam liar"]
+  },
+  {
+    "question": "Ancaman terbesar bagi keanekaragaman hayati?",
+    "correct_answer": "Deforestasi",
+    "incorrect_answers": ["Kepunahan alami", "Perubahan suhu global", "Migrasi burung"]
+  },
+  {
+    "question": "Contoh keanekaragaman genetik?",
+    "correct_answer": "Variasi warna bulu kucing",
+    "incorrect_answers": ["Hutan, padang rumput", "Komunitas serangga", "Spesies ikan laut"]
+  },
+  {
+    "question": "Apa itu bioma?",
+    "correct_answer": "Komunitas ekosistem besar",
+    "incorrect_answers": ["Jenis spesies tunggal", "Kelompok genetik", "Proses evolusi"]
+  },
+  {
+    "question": "Contoh simbiosis mutualisme?",
+    "correct_answer": "Lebah membantu penyerbukan",
+    "incorrect_answers": ["Cacing pita pada hewan", "Buaya dan burung", "Ikan kecil pada ikan besar"]
+  },
+  {
+    "question": "Ciri utama ekosistem laut?",
+    "correct_answer": "Terumbu karang, ikan, mamalia laut",
+    "incorrect_answers": ["Hutan, padang rumput", "Pohon dan serangga", "Komunitas burung dan reptil"]
+  },
+  {
+    "question": "Dampak hilangnya keanekaragaman hayati?",
+    "correct_answer": "Menurunkan stabilitas ekosistem",
+    "incorrect_answers": ["Meningkatkan kesuburan tanah", "Meningkatkan spesies invasif", "Meningkatkan produktivitas lahan"]
+  },
+  {
+    "question": "Apa itu spesies invasif?",
+    "correct_answer": "Spesies yang merugikan ekosistem",
+    "incorrect_answers": ["Punah secara alami", "Migrasi musiman", "Tinggal di habitat alami"]
+  },
+  {
+    "question": "Cara melestarikan keanekaragaman hayati?",
+    "correct_answer": "Cagar alam dan taman nasional",
+    "incorrect_answers": ["Membakar hutan", "Mengeringkan lahan basah", "Menangkap spesies langka"]
+  },
+  {
+    "question": "Fungsi keanekaragaman hayati?",
+    "correct_answer": "Menjaga keseimbangan ekosistem",
+    "incorrect_answers": ["Mengurangi sumber daya", "Meningkatkan risiko bencana", "Mengurangi populasi predator"]
+  },  
     
   ],
   time = 30,
